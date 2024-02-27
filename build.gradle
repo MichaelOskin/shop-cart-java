@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.penzgtu.Application'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'commons-io:commons-io:2.15.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+    implementation 'com.github.freva:ascii-table:1.8.0'
+    implementation (group: 'commons-dbutils', name: 'commons-dbutils', version: '1.8.1')
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+}
+
+application {
+    mainClassName = 'org.penzgtu.Application.Application'
+}
+
+tasks.jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.penzgtu.Application.Application'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+/*
+task script(type: Exec) {
+    commandLine 'bash', '-c', 'gradle clean build'
+    commandLine 'bash', '-c', 'clear; ./build.sh'
+}
+*/
