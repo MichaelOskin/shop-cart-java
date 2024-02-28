@@ -22,7 +22,7 @@ sdk install gradle 8.6
 ## Building and launching a project
 ```sh
 git clone https://github.com/MichaelOskin/shop-cart-java.git
-cd shop-cart-java && ./build.sh
+cd shop-cart-java && chmod +x build.sh && ./build.sh
 ```
 
 ## Docker run
