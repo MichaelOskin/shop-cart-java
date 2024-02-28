@@ -19,6 +19,7 @@ public class AuthenticationServiceMenu {
                 new CreateTableSQLite().InitialDatabase();
             } catch (IOException e) {throw new RuntimeException(e);}
         }
+        menu.clear();
         menu.print("You have an account? - (true || false)");
         if (menu.scanValue("Boolean:", Boolean.class)) {
             int user_id = signIn();
