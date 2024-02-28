@@ -33,4 +33,4 @@ WORKDIR /app
 COPY . .
 
 # We are building the project. If you are using Docker: Please change the build file.gradle (delete "task script{}")
-RUN gradle script
+RUN gradle build
