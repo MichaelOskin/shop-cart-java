@@ -21,4 +21,4 @@ echo script:jar
 echo 
 cd build/libs && ls
 echo run application..
-x-terminal-emulator -e java -jar shop-cart-java
+x-terminal-emulator -e java -jar shop-cart-java-1.0.jar
