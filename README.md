@@ -13,11 +13,6 @@ A simple project to simulate the shopping cart of an online store and an authent
 [![Java](https://img.shields.io/badge/-Java-orange?style=flat-square&logo=java)
 ](https://www.oracle.com/java/technologies/downloads/)[![Gradle](https://img.shields.io/badge/-Gradle-02303A?style=flat-square&logo=gradle)](https://gradle.org/install/)
 
-## Installing Gradle - Linux
-```sh
-curl -s "https://get.sdkman.io" | bash
-sdk install gradle 8.6
-```
 
 ## Building and launching a project
 ```sh
@@ -27,8 +22,8 @@ cd shop-cart-java && chmod +x build.sh && ./build.sh
 
 ## Docker run
 ```sh
-docker build -t yourImageName .
-docker run -it yourImageName
+docker build -t shop-cart .
+docker run -it shop-cart
 ```
 
 ## Initializing paths
